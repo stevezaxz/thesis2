@@ -1,0 +1,4 @@
+create procedure sp_addbarangay(barangay varchar(15))
+begin
+insert into tblbarangay values(null,barangay,(select max(youth_id) from tblyouth));
+end

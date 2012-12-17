@@ -1,0 +1,5 @@
+drop procedure if exists sp_addmotheryp;
+create procedure sp_addmotheryp()
+begin
+insert into tblyouthparents values((select max(youth_id) from tblyouth),(select max(parent_id) from tblparents));
+end-

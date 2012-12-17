@@ -1,0 +1,4 @@
+create procedure sp_addyouth(fname varchar(25),mname varchar(10),lname varchar(20),bdate varchar(25),gender varchar(6),educatt varchar(45),skul_last varchar(50),skills varchar(50),household varchar(5))
+begin 
+insert into tblyouth values(null,fname,mname,lname,(select str_to_date(bdate,'%M%d,%Y')),gender,educatt,skul_last,skills,household);
+end

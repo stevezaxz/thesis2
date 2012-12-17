@@ -1,0 +1,4 @@
+create procedure sp_addstatus(status varchar(3), employed varchar(15), registered varchar(15) )
+begin
+insert into tblstatus values(null,status,employed,registered);
+end

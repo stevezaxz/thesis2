@@ -1,0 +1,4 @@
+create procedure sp_addyouthstatus()
+begin
+insert into tblyouthstatus values((select max(youth_id) from tblyouth),(select max(stat_id) from tblstatus));
+end

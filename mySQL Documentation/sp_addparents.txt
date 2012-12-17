@@ -1,0 +1,5 @@
+DROP PROCEDURE IF EXISTS cidt.sp_addparents;
+CREATE PROCEDURE cidt.`sp_addparents`(fname varchar(25),age int(11), religion varchar(20))
+begin 
+insert into tblparents values(null,fname,age,religion);
+end;

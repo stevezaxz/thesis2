@@ -1,0 +1,385 @@
+<html>
+<style>
+h3{
+font-size: 30px;
+
+}
+h1, h2 {
+  font: bold italic 220px georgia, times new roman, serif;
+  color: #05390a;
+  letter-spacing: -.09em;
+  text-shadow: 0 1px 0 #fff;
+  -webkit-transition-duration: 1s;
+}
+						
+h2  {
+  font-size: 21px;
+  text-shadow: 0 1px 0 #fff;
+  font-weight: normal;
+}
+					
+.head, .head:hover {
+  box-shadow: none;
+  margin-top: 30px;
+}
+select{
+width: 5px;
+}
+
+</style>
+<head> 
+
+ <link rel="stylesheet" href="css/bootstrap.css">
+
+ 
+</head>
+<body id="active">
+
+<div class="container" style='margin-top: 40px;'>
+
+			<form action="" method="" data-form="validate">
+			<center><h1><b>Survey Form</b></h1></center>
+			 <form class="form-horizontal" id="form_validation" name="form_validation" action="adduserbackend.php" method="POST">
+             <fieldset>            
+        <div class="row-fluid">
+                <div class="span12">
+    
+                            <div class="row-fluid">
+                                        <div class="span6">
+                                          <label class="control-label">Firstname:</label>
+                                                 <div class="controls">
+                                                        <input class="input-medium required" type="text" name="fname" id="fname">
+                       
+                       
+                                                 </div>  
+                                            
+                                            
+                                            
+                                
+                                          <label class="control-label">Middlename:</label>
+                                                 <div class="controls">
+                                                        <input class="input-medium required" type="text" name="mname" id="mname">
+                       
+                       
+                                                 </div>
+          
+                              
+                                         <label class="control-label">Lastname:</label>
+                                                     <div class="controls">
+                                                        <input class="input-medium required" type="text" name="lname" id="lname">
+                       
+                       
+                                                   </div>
+                            
+      
+                                         </div>
+                                         <div class="span6">
+                        
+                            
+                                                  <label class="control-label">Username:</label>
+                                                         <div class="controls">
+                                                             <input class="input-medium required" type="text" name="username" id="username">
+                       
+                       
+                                                         </div>
+                        
+       
+                                                 <label class="control-label">Password:</label>
+                                                            <div class="controls">
+                                                               <input class="input-medium required" type="password" name="password" id="password">
+                       
+                       
+                                                             </div>
+                                                 
+                                                 <label class="control-label">User privilege:</label>
+                                                            <div class="controls">
+                                                               <select name="userpriv" id="userpriv">
+                                                                   <option value="MANAGEMENT">MANAGEMENT</option>
+                                                                   <option value="PERSONNEL">PERSONNEL</option>
+                                                                   <option value="YOUTH">YOUTH</option>
+                                                               </select>
+                       
+                       
+                                                             </div>
+      
+                                         </div>
+                             </div>
+                </div>
+         </div>
+                    <center><input type="submit" value="Register" class="btn btn-primary" /> </center>
+            </form>
+                   
+			<legend><h2>Personal Information</h2></legend>
+                        <table>
+                            <tr>
+					<dl class="field row">
+                                            <td><label>First Name</label><dt class="text"></td><td><input type="text" placeholder="First Name" required /></dt></td>
+						<dd class="msg"><span class="caret"></span>Please fill this out.</dd>
+					</dl>
+                            
+                        </tr>
+					<dl class="field row">
+						<label>Middle Name</label>
+						<dt class="text"><input type="text" placeholder="Middle Name" required /></dt>
+						<dd class="msg"><span class="caret"></span>Please fill this out.</dd>
+					</dl>
+					<dl class="field row">
+					<label>Last Name</label>
+						<dt class="text"><input type="text" placeholder="Last Name" required /></dt>
+						<dd class="msg"><span class="caret"></span>Please fill this out.</dd>
+					</dl>
+			
+					<div class="radiobtn">
+					<label>Gender</label> 
+					<input class="in" type="radio" value="Male" name="gender"/>
+                    <span></span> Male
+                    <input class="in" type="radio" value="Female" name="gender"/>
+                    <span></span> Female
+					</div>
+					<dl class="field row">
+					<label>Household #</label>
+						<dt class="text"><input type="text" placeholder="Household #" required /></dt>
+						<dd class="msg"><span class="caret"></span>Please fill this out.</dd>
+					</dl>
+					
+				<label>Barangay</label>
+				<select>
+							  <option SELECTED>Select here ..</option>
+								<option value="Agusan">Agusan</option>
+								<option value="Baikingon">Baikingon</option>
+								<option value="Balubal">Balubal</option>
+								<option value="Balulang">Balulang</option>
+								<option value="Bayabas">Bayabas</option>
+								<option value="Bayanga">Bayanga</option>
+								<option value="Besigan">Besigan</option>
+								<option value="Bonbon">Bonbon</option>
+								<option value="Bugo">Bugo</option>
+								<option value="Bulua">Bulua</option>
+								<option value="Camaman-an">Camaman-an</option>
+								<option value="Canitoan">Canitoan</option>
+								<option value="Carmen">Carmen</option>
+								<option value="Consolacion">Consolacion</option>
+								<option value="Cugman">Cugman</option>
+								<option value="Dansolihon">Dansolihon</option>
+								<option value="F.S Catanico">F.S Catanico</option>
+								<option value="Gusa">Gusa</option>
+								<option value="Indahag">Indahag</option>
+								<option value="Iponan">Iponan</option>
+								<option value="Kauswagan">Kauswagan</option>
+								<option value="Lapasan">Lapasan</option>
+								<option value="Lumbia">Lumbia</option>
+								<option value="Macabalan">Macabalan</option>
+								<option value="Macasandig">Macasandig</option>
+								<option value="Mambuaya">Mambuaya</option>
+								<option value="Nazareth">Nazareth</option>
+								<option value="Pagalungan">Pagalungan</option>
+								<option value="Pagatpat">Pagatpat</option>
+								<option value="Pigsag-an">Pigsag-an</option>
+								<option value="Puerto">Puerto</option>
+								<option value="San Simon">San Simon</option>
+								<option value="Tablon">Tablon</option>
+								<option value="Taglimao">Taglimao</option>
+								<option value="Tagpangi">Tagpangi</option>
+								<option value="Tignapoloan">Tignapoloan</option>
+								<option value="Tuburan">Tuburan</option>
+								<option value="Barangay 1">Barangay 1</option>
+								<option value="Barangay 2">Barangay 2</option>
+								<option value="Barangay 3">Barangay 3</option>
+								<option value="Barangay 4">Barangay 4</option>
+								<option value="Barangay 5">Barangay 5</option>
+								<option value="Barangay 6">Barangay 6</option>
+								<option value="Barangay 7">Barangay 7</option>
+								<option value="Barangay 8">Barangay 8</option>
+								<option value="Barangay 9">Barangay 9</option>
+								<option value="Barangay 10">Barangay 10</option>
+								<option value="Barangay 11">Barangay 11</option>
+								<option value="Barangay 12">Barangay 12</option>
+								<option value="Barangay 13">Barangay 13</option>
+								<option value="Barangay 14">Barangay 14</option>
+								<option value="Barangay 15">Barangay 15</option>
+								<option value="Barangay 16">Barangay 16</option>
+								<option value="Barangay 17">Barangay 17</option>
+								<option value="Barangay 18">Barangay 18</option>
+								<option value="Barangay 19">Barangay 19</option>
+								<option value="Barangay 20">Barangay 20</option>
+								<option value="Barangay 21">Barangay 21</option>
+								<option value="Barangay 22">Barangay 22</option>
+								<option value="Barangay 23">Barangay 23</option>
+								<option value="Barangay 24">Barangay 24</option>
+								<option value="Barangay 25">Barangay 25</option>
+								<option value="Barangay 26">Barangay 26</option>
+								<option value="Barangay 27">Barangay 27</option>
+								<option value="Barangay 28">Barangay 28</option>
+								<option value="Barangay 29">Barangay 29</option>
+								<option value="Barangay 30">Barangay 30</option>
+								<option value="Barangay 31">Barangay 31</option>
+								<option value="Barangay 32">Barangay 32</option>
+								<option value="Barangay 33">Barangay 33</option>
+								<option value="Barangay 34">Barangay 34</option>
+								<option value="Barangay 35">Barangay 35</option>
+								<option value="Barangay 36">Barangay 36</option>
+								<option value="Barangay 37">Barangay 37</option>
+								<option value="Barangay 38">Barangay 38</option>
+								<option value="Barangay 39">Barangay 39</option>
+								<option value="Barangay 40">Barangay 40</option>
+								</select>
+			<dl class="field row">
+			<label>Religion</label>
+						<dt class="text"><input type="text" placeholder="Religion" required /></dt>
+						<dd class="msg"><span class="caret"></span>Please fill this out.</dd>
+			</dl>
+				
+				 
+				
+				<label class="">Birthday</label>
+				<select name="month" id="month" style="width: 120px;">
+				<option value="January">January</option>
+				<option value="February">February</option>
+				<option value="March">March</option>
+				<option value="April">April</option>
+				<option value="may">May</option>
+				<option value="June">June</option>
+				<option value="July">July</option>
+				<option value="August">August</option>
+				<option value="September">September</option>
+				<option value="October">October</option>
+				<option value="November">November</option>
+				<option value="December">December</option>
+				</select>
+				
+				<select name="day" id="day" style="width: 110px;">
+				<?php
+				for($i=1;$i<32;$i++){
+				echo "<option value=$i>$i</option>";
+				}
+				?>
+				</select>
+				
+				<select name="year" id="year" style="width: 110px;">
+				<?php
+				for($i=1983;$i<2030;$i++){
+				echo "<option value=$i>$i</option>";
+				}
+				?>
+				</select>
+				
+				<!--parents info-->
+				<h2>Parents Information</h2>
+			
+				<dl class="field row">
+				<label>Fathers Name</label>
+						<dt class="text"><input type="text" placeholder="Fathers Name" required /></dt>
+						<dd class="msg"><span class="caret"></span>Please fill this out.</dd>
+				</dl>
+				<dl class="field row">
+				<label>Age</label>
+						<dt class="text"><input type="text" placeholder="Age" /></dt>
+		
+				</dl>
+				<dl class="field row">
+				<label>Occupation</label>
+						<dt class="text"><input type="text" placeholder="Fathers Occupation" /></dt>
+						
+				</dl>
+				<dl class="field row">
+				<label>Mothers Name</label>
+						<dt class="text"><input type="text" placeholder="Mothers Name" required /></dt>
+						<dd class="msg"><span class="caret"></span>Please fill this out.</dd>
+				</dl>
+				<dl class="field row">
+				<label>Age</label>
+						<dt class="text"><input type="text" placeholder="Age" /></dt>
+						
+				</dl>
+				<dl class="field row">
+				<label>Occupation</label>
+						<dt class="text"><input type="text" placeholder="Mothers Occupation"/></dt>
+				</dl>
+				<h2>Further Information</h2>
+				<br>
+				<label class="">Status *</label>
+				<select class="skul" name="status" style="width: 140px;" >
+				<option value="OSY">Out Of School</option>
+				<option value="ISY">In School</option>
+				</select><br>
+				<label class="">Educational Attainment *</label>
+				<select class="skul" name="educatt" style="width: 160px;">
+				<option value="Elementary">Elementary Level</option>
+				<option value="High School">High School Level</option>
+				<option value="College">College Degree</option>
+				<option value="Vocational">Vocational</option>
+				</select>
+				<dl class="field row">
+				<label>School Last Attended</label>
+						<dt class="text"><input type="text" placeholder="School Last Attended"/></dt>
+
+				</dl>
+				<dl class="field row">
+				<label>Skills</label>
+						<dt class="text"><input type="text" placeholder="Skills" style="width: 110px;"/></dt>
+						
+				</dl>
+				
+					<label class="">Employed</label>
+                    <input type="radio" value="Employed" name="employed"/>
+                    <label class="male">Yes</label>
+                    <input type="radio" value="Not Employed" name="employed"/>
+                    <label class="female">No</label>
+					<br>
+					<label class="">Registered Voter</label>
+                    <input type="radio" value="Registered" name="voter"/>
+                    <label class="male">Yes</label>
+                    <input type="radio" value="Not Registered" name="voter"/>
+                    <label class="female">No</label>
+					<br>
+					
+				
+				<h2>Remarks</h2>
+				<h3>In your own opinion what do you think are the problems faced by the youth in your place? (Please rank from the most
+				serious problem to the least problematic issue.)</h3>
+				<div class="probs">
+				<br><br>
+				<label name="ques1" >Drugs *</label>
+				<input type="text" class="txt" name="ans1" style="height: 30px;">
+				<br>
+				
+				<label class="prob" name="ques2">Pre-marital sex *</label>
+				<input type="text" class="txt" name="ans2" style="height: 30px;"/>
+				<br>
+				
+				<label class="prob" name="ques3" >Early Marriage *</label>
+				<input type="text" class="txt" name="ans3" style="height: 30px;"/>
+				<br>
+				
+				<label class="prob" name="ques4" >Teenage Pregnancy *</label>
+				<input type="text" class="txt" name="ans4" style="height: 30px;"/>
+				<br>
+				
+				<label class="prob" name="ques5" value="Smoking & Drinking"> Smoking & Drinking *</label>
+				<input type="text" class="txt" name="ans5" style="height: 30px;"/>
+				<br>
+				
+				<label class="prob" name="ques6" value="Now work to find">No work to find*</label>
+				<input type="text" class="txt" name="ans6" style="height: 30px;"/>
+				<br>
+				
+				<label class="prob" name="ques7" value="Relationship with family">Relationship with family *</label>
+				<input type="text" class="txt" name="ans7" style="height: 30px;"/>
+				</div>
+				
+
+				
+					<dl class="row">
+					<p class="btn primary" style='margin-left: 60%;'><a href="#">Submit</a></p>
+				
+					</dl>
+			
+                        </table>
+			</form>
+</div>		
+
+</div>
+
+</body>
+
+</html>

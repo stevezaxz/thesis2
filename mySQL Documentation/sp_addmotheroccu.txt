@@ -1,0 +1,4 @@
+create procedure sp_addmotheroccu()
+begin
+insert into tblparentsoccu values((select max(parent_id) from tblparents),(select max(occu_id) from tbloccupation));
+end

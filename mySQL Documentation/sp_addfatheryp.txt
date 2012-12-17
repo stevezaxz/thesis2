@@ -1,0 +1,5 @@
+drop procedure if exists sp_addfatheryp;
+create procedure sp_addfatheryp()
+begin
+insert into tblyouthparents values((select max(youth_id) from tblyouth),(select max(parent_id) from tblparents));
+end-

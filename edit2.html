@@ -1,0 +1,104 @@
+<?php
+
+//include('connectDB.php');
+
+
+?>
+
+
+<html>
+<title>Update | User Profile </title>
+<link rel="stylesheet" type="text/css" href="css/adduser.css"/>
+<link rel="stylesheet" type="text/css" href="css/style4.css"/> 
+
+<div style='margin: auto;'>
+<div class="content" style='height: 450px;'>
+<form action="edituserbackend.php" class="registeruser" method="POST">
+<h2>Update User Information</h2> 
+            <fieldset class="row">
+					<legend>User Information</legend>
+				<div class="info">
+				<p>
+				
+				<?php
+				$uid = $_POST['edit'];
+				
+							$result  = mysql_query("select * from tbluser where user_id='$uid'");
+					$row = mysql_num_rows($result);
+					
+					
+					if($row!=0) {
+					
+						for($i=0;$i<$row;$i++) {
+							$row1 = mysql_fetch_row($result);
+						}
+					
+						$uname = $row1[1];
+						$passwrd = $row1[2];
+						$fname = $row1[5];
+						$mname = $row1[6];
+						$lname = $row1[7];
+					
+					
+					}
+							
+				
+				
+				
+				
+				
+				
+				
+				?>
+				
+				
+				<input type="hidden" value=<?php echo $uid;?> name="uid">
+				
+				
+				
+                    <label class="nym">Username * </label>
+                    <input class="n" type="text" name="uname" /value=<?php echo $row1[1];?>> </p><p>
+                    <label class="nym">Password * </label>
+                    <input class="n" type="password" name="password"/ value=<?php echo $row1[2];?> ></p>
+					
+               <p>
+			   
+				<label class="prev">User Privilege *</label>
+				<select class="previlege" name="userpriv">
+				<option value="MANAGEMENT">MANAGEMENT</option>
+				<option value="RESPONDENT">RESPONDENT</option>
+				<option value="PERSONNEL">PERSONNEL</option>
+				
+				</select>
+				</p>
+				
+				<p>
+			   
+				<label class="prev">Status *</label>
+				<select class="status" name="status">
+				<option value="ACTIVE">ACTIVE</option>
+				<option value="INACTIVE">INACTIVE</option>
+								
+				</select>
+				</p>
+				
+				
+				
+				
+				</div>
+				<div class="info2">
+				<p><label class="nym">Firstname * </label>
+                    <input class="n" type="text"/ name="fname" value=<?php echo $fname;?>></p>
+				<p><label class="nym">Middlename * </label>
+                    <input class="n" type="text" name="mname"/ value=<?php echo $mname;?>></p>
+				<p><label class="nym">Lastname * </label>
+                    <input class="n" type="text" name="lname"/ value=<?php echo $lname;?>></p>
+					
+				
+				</div>
+				</fieldset> 
+				<input class="sub" type="submit" value="Submit" name="action"/>
+				
+		 </form>		
+</div>		</div>					 
+</html>
